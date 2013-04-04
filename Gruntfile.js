@@ -101,7 +101,9 @@ module.exports = function( grunt ) {
 					banner: "/*! jQuery v<%= pkg.version %> | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license */",
 					sourceMap: "dist/jquery.min.map",
 					beautify: {
-						ascii_only: true
+						ascii_only: true,
+            max_line_len: 500   // To avoid firewall issues.
+                                // See https://developers.google.com/closure/compiler/faq#linefeeds
 					}
 				}
 			}
